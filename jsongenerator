@@ -1,0 +1,15 @@
+[
+  '{{repeat(20, 30)}}',
+  {
+    id: '{{objectId()}}',
+    name: '{{lorem(3, "words")}}',
+    author: '{{firstName()}} {{surname()}}',
+    pages: '{{integer(200, 400)}}',
+    price: '{{floating(10, 100, 2, "$0,0.00")}}',
+    picture: 'https://placehold.it/200x250',
+    genre: '{{random("History", "Art", "Biography", "Cookbook", "Action and adventure", "Fantasy", "Drama", "Poetry")}}',
+    publication: '{{company().toUpperCase()}}',
+    publishedDate: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd")}}',
+    description: '{{lorem(1, "paragraphs")}}'
+  }
+]

@@ -1,0 +1,19 @@
+@import '../../styles/variable';
+
+.book-tile {
+  padding: 10px;
+  .book-detail {
+    padding: 5px 0;
+    .book-name {
+      font-weight: 600;
+    }
+    .book-author {
+      color: $grey;
+      font-size: 14px;
+      padding-top: 3px;
+      .bold {
+        font-weight: 600;
+      }
+    }
+  }
+}
