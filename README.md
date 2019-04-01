@@ -5,11 +5,11 @@
   4. Listing all books in a page
 
 # Technologies Used:
-....................
 ## Front End
   - React
   - Redux-Saga
   - TypeScript
+  - Webpack
 
 ## Back End
   - Node JS
