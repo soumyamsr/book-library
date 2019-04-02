@@ -11,6 +11,7 @@ import {
   addBookActionDB,
 } from "../../store/actions";
 import BookModal from "Components/BookModal";
+import AutoSuggest from "Components/AutoSuggest";
 
 class Header extends React.PureComponent<HeaderProps, HeaderState> {
 	state = {
@@ -73,12 +74,13 @@ class Header extends React.PureComponent<HeaderProps, HeaderState> {
         <section className={open ? "sub-header show" : "sub-header"}>
           <div className="search-box">
             <form className="search-form" onSubmit={this.searchBook.bind(this)}>
-              <input type="text" autoFocus
+              {/* <input type="text" autoFocus
               placeholder="Search Book Name"
               name="bookSearch" id="bookSearch"
               value={this.state.inputTextVal}
               onChange={this.handleInputChange.bind(this)}
-              className="search-input"/>
+              className="search-input"/> */}
+              <AutoSuggest items={this.props.bookList} placeholder="Search Book Name" />
               <button className="search-btn" type="submit">
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
