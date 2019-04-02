@@ -14,12 +14,20 @@ export default function CapstoneAppReducer(currState: BooksAppState, action: Act
     case ActionTypes.ADD_BOOK:
       return {...currState, ...{bookList: [...currState.bookList, action.payload]}};
     case ActionTypes.EDIT_BOOK:
-      return {...currState, ...{currentBook: {...currState.currentBook, ...action.payload.bookData}}}
+      return editBook(currState, action);
     case ActionTypes.DELETE_BOOK:
       return deleteBook(currState, action);
     default:
       return currState;
   }
+}
+
+function editBook(currState: BooksAppState, {type, payload}: Action) {
+  if (type === ActionTypes.EDIT_BOOK) {
+    const updatedBookList = currState.bookList.map(l => l.id === payload.bookId ? payload.bookData : l)
+    return {...currState, ...{bookList: [...updatedBookList]}, ...{currentBook: {...currState.currentBook, ...payload.bookData}}};
+  }
+  return currState;
 }
 
 function deleteBook(currState: BooksAppState, {type, payload}: Action) {

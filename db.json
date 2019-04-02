@@ -4,7 +4,7 @@
       "name": "ipsum non dolor",
       "author": "Foreman Cooley",
       "pages": 246,
-      "price": "$12.36",
+      "price": "$13.36",
       "picture": "https://placehold.it/200x250",
       "genre": "Cookbook",
       "publication": "ISBOL",
@@ -83,18 +83,6 @@
       "publication": "VELOS",
       "publishedDate": "2014-06-18",
       "description": "Aliqua reprehenderit nulla proident labore ipsum irure proident pariatur officia est consequat. Ad nostrud est in aute enim esse exercitation ex. Mollit duis culpa nisi dolore enim sit. Consequat minim et excepteur adipisicing id sit cillum deserunt culpa magna voluptate in do laborum. Sit ipsum duis labore proident sunt non Lorem sit nulla minim ut tempor est.\r\n"
-    },
-    {
-      "id": "5ca0f0465f0ed2a6e60c59c2",
-      "name": "magna dolore consequat",
-      "author": "Mills Sykes",
-      "pages": 202,
-      "price": "$74.63",
-      "picture": "https://placehold.it/200x250",
-      "genre": "Action and adventure",
-      "publication": "ENERSAVE",
-      "publishedDate": "2017-11-17",
-      "description": "Mollit esse excepteur enim consectetur adipisicing voluptate magna amet pariatur exercitation sint exercitation. Dolore incididunt culpa occaecat nostrud adipisicing cupidatat occaecat cupidatat ipsum incididunt esse voluptate laboris deserunt. Fugiat adipisicing officia enim pariatur velit incididunt.\r\n"
     },
     {
       "id": "5ca0f046197eb2417dfc3374",

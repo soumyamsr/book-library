@@ -2,6 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { Loader } from "Components/Loader";
+import Header from "Components/Header";
 import { BooksAppState, BookData } from "client/src/store/types";
 import {
   getBookActionDB,
@@ -15,6 +16,7 @@ import BookDetail from "Components/BookDetail";
 import BookModal from "Components/BookModal";
 
 export interface BooksProps {
+  bookList?: BookData[],
   currentBook?: BookData,
   getBookDetail(bookId: string): void,
   resetCurrentBook(): void,
@@ -59,9 +61,10 @@ class DetailPage extends React.PureComponent<BooksProps, BooksState> {
   }
 
   public render() {
-    const { currentBook } = this.props;
+    const { currentBook, bookList } = this.props;
     return (
       <React.Fragment>
+        <Header title="Book Library" bookList={bookList} />
         {
           this.state.openModal
           ? <BookModal 
@@ -84,6 +87,7 @@ class DetailPage extends React.PureComponent<BooksProps, BooksState> {
 }
 
 const mapStateToProps = (state: BooksAppState) => ({
+  bookList: state.bookList,
   currentBook: state.currentBook,
 });
 
